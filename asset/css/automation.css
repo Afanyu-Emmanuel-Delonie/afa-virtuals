@@ -400,6 +400,7 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 24px;
+            margin-top: 2rem;
             box-shadow: var(--soft-shadow);
         }
 
@@ -2001,6 +2002,441 @@
             .section-header {
                 margin-bottom: 80px;
             }
+        }
+
+        /* Case study section for the automation class */
+
+          .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+        
+        .case-details {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(249, 115, 22, 0.1);
+        }
+        
+        .client-info {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .client-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .client-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .challenge-section {
+            margin-bottom: 30px;
+        }
+        
+        .challenge-section h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .challenge-list {
+            list-style: none;
+            space: 15px;
+        }
+        
+        .challenge-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .challenge-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .challenge-icon {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .results-summary {
+            background: linear-gradient(135deg, var(--success-color), #48bb78);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .results-summary h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .key-metric {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .dashboard-container {
+            background: var(--dark-color);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 1px solid #374151;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #374151;
+        }
+        
+        .dashboard-title {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .dashboard-date {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-metric-card {
+            background: #374151;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #4b5563;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .dashboard-metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .metric-label {
+            color: var(--gray-color);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-value {
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .metric-change {
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .positive {
+            color: var(--success-color);
+        }
+        
+        .negative {
+            color: var(--error-color);
+        }
+        
+        .chart-container {
+            background: #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #4b5563;
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .chart-title {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .chart-period {
+            color: var(--gray-color);
+            font-size: 0.8rem;
+        }
+        
+        .chart-area {
+            height: 220px;
+            background: linear-gradient(180deg, rgba(249, 115, 22, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .line-chart {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .chart-line {
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 2px 8px rgba(249, 115, 22, 0.3));
+        }
+        
+        .chart-area-fill {
+            fill: url(#gradient);
+            opacity: 0.6;
+        }
+        
+        .chart-dot {
+            fill: var(--primary-color);
+            stroke: var(--white);
+            stroke-width: 2;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-dot:hover {
+            fill: var(--secondary-color);
+            transform: scale(1.2);
+            stroke-width: 3;
+        }
+        
+        .chart-grid-line {
+            stroke: rgba(255, 255, 255, 0.1);
+            stroke-width: 1;
+        }
+        
+        .chart-label {
+            fill: var(--gray-color);
+            font-size: 10px;
+            text-anchor: middle;
+        }
+        
+        @keyframes drawLine {
+            0% { stroke-dasharray: 0 1000; }
+            100% { stroke-dasharray: 1000 0; }
+        }
+        
+        .chart-line {
+            stroke-dasharray: 1000;
+            animation: drawLine 2s ease-in-out forwards;
+        }
+        
+        .activity-feed {
+            background: #374151;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #4b5563;
+            height: 306px;
+            overflow-y: auto;
+        }
+        
+        .activity-header {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #4b5563;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .activity-text {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            flex: 1;
+        }
+        
+        .activity-time {
+            color: #6b7280;
+            font-size: 0.8rem;
+        }
+        
+        .gauge-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .gauge-card {
+            background: #374151;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #4b5563;
+            text-align: center;
+            position: relative;
+        }
+        
+        .gauge-title {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .gauge-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(var(--primary-color) 0deg, var(--primary-color) var(--progress), #4b5563 var(--progress), #4b5563 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            position: relative;
+            animation: gaugeAnimation 2s ease-out;
+        }
+        
+        .gauge-circle::before {
+            content: '';
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #374151;
+            position: absolute;
+        }
+        
+        .gauge-value {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .gauge-label {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .gauge-improvement {
+            color: var(--success-color);
+            font-size: 0.85rem;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        @keyframes gaugeAnimation {
+            from { transform: rotate(-90deg); }
+            to { transform: rotate(0deg); }
+        }
+        
+        .revenue-gauge { --progress: 270deg; }
+        .time-gauge { --progress: 306deg; }
+        
+        .bottom-metrics {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gauge-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .bottom-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .client-details {
+                grid-template-columns: 1fr;
+            }
+            
         }
 
         /* UTILITY CLASSES */
