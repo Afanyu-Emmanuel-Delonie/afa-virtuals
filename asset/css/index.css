@@ -3099,18 +3099,19 @@ section {
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 10vw, 2.5rem);
   font-weight: 700;
   color: var(--dark-color);
   margin-bottom: clamp(1rem, 3vw, 1.5rem);
 }
 
 .section-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 8.5vw, 1.2rem);
   color: var(--gray-color);
   font-weight: 400;
   letter-spacing: 0.5px;
   font-family: var(--font-secondary);
+  justify-self: center;
 }
 
 .blogs-grid {

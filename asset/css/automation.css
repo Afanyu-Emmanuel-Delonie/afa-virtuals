@@ -1,3 +1,143 @@
+/* Hybrid Approach Section */
+.hybrid-section {
+    background: #fff;
+    position: relative;
+}
+
+.hybrid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hybrid-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hybrid-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    background: var(--brand-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hybrid-inner {
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hybrid-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hybrid-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.human-icon {
+    background: var(--primary-orange);
+}
+
+.plus-sign {
+    font-size: 20px;
+    color: var(--dark-slate);
+    font-weight: bold;
+}
+
+.automation-icon {
+    background: var(--secondary-amber);
+}
+
+.hybrid-features {
+    list-style: none;
+}
+
+.hybrid-features li {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.hybrid-features li:last-child {
+    border-bottom: none;
+}
+
+.hybrid-features i {
+    color: var(--primary-orange);
+    margin-top: 3px;
+}
+
+/* Responsive styles for Hybrid Approach Section */
+@media (max-width: 900px) {
+    .hybrid-grid {
+        gap: 40px;
+    }
+    .hybrid-visual {
+        height: 300px;
+    }
+    .hybrid-circle {
+        width: 220px;
+        height: 220px;
+    }
+    .hybrid-inner {
+        width: 170px;
+        height: 170px;
+    }
+    .hybrid-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hybrid-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .hybrid-visual {
+        height: 180px;
+    }
+    .hybrid-circle {
+        width: 120px;
+        height: 120px;
+    }
+    .hybrid-inner {
+        width: 90px;
+        height: 90px;
+    }
+    .hybrid-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+}
  :root {
             --primary-orange: #f97316;
             --secondary-amber: #ff9e00;
@@ -23,7 +163,131 @@
             --glass-outline: rgba(255, 255, 255, 0.08);
             --gradient: linear-gradient(135deg, #f97316 0%, #ff9e00 100%);
             --dark-glass: rgba(31, 41, 55, 0.95);
+
+              /* Fluid typography using clamp() for better scaling */
+ 
         }
+/* Process Section */
+.process-section {
+    background: white;
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--brand-gradient);
+    transform: translateX(-50%);
+}
+
+.process-step {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.process-step:nth-child(odd) {
+    flex-direction: row;
+}
+
+.process-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.process-content {
+    background: white;
+    padding: 30px;
+    border-radius: var(--large-radius);
+    box-shadow: var(--soft-shadow);
+    width: 45%;
+    position: relative;
+}
+
+.process-number {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: var(--brand-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.process-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-slate);
+}
+
+.process-content p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Results Section */
+.results-section {
+    background: var(--background-gradient);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.result-card {
+    background: white;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: var(--large-radius);
+    box-shadow: var(--soft-shadow);
+    transition: var(--premium-transition);
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.result-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.result-label {
+    font-size: 1.1rem;
+    color: var(--dark-slate);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.result-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
 
         * {
             margin: 0;
@@ -244,6 +508,20 @@
 
         .aut-stat-number {
             font-size: clamp(1.2rem, 4vw, 1.5rem);
+        @media (max-width: 780px) {
+            .process-step {
+                flex-direction: column !important;
+            }
+            .process-content {
+                width: 100%;
+            }
+            .process-timeline::before {
+                left: 30px;
+            }
+            .process-number {
+                left: 30px;
+            }
+        }
             font-weight: 800;
             color: var(--primary-orange);
             display: block;
@@ -322,7 +600,7 @@
         }
 
         .section-subtitle-secondary {
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(1rem, 8vw, 1.2rem);
             color: var(--light-cream);
             line-height: 1.6;
             opacity: 0.8;
@@ -1686,7 +1964,7 @@
             }
 
             .agent-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
 
             .agent-card {
