@@ -1,3 +1,30 @@
+// CTA Section Particle Animation and Call Scheduling
+function createParticles() {
+    const particleField = document.getElementById('particleField');
+    const particleCount = 25;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        // Random starting position
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (8 + Math.random() * 7) + 's';
+        particleField.appendChild(particle);
+    }
+}
+
+function scheduleCall() {
+    console.log('Opening strategy call booking...');
+    alert('🚀 Redirecting to strategy call booking...\n\nBook your free consultation now!');
+    // Replace with actual booking URL
+    // window.open('https://your-calendar-url.com', '_blank');
+}
+
+// Initialize particles when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    createParticles();
+});
 // =============================================================================
 // OPTIMIZED WEBSITE JAVASCRIPT - PERFORMANCE ENHANCED WITH FIXED MOBILE NAV
 // Target: Sub 1-second loading while preserving all functionality
