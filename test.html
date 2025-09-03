@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFA Virtuals - Our Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>About Afa-Virtuals - Realtor Automation & Virtual Assistance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #f97316;
@@ -16,312 +17,488 @@
             --success-color: #38b2ac;
             --error-color: #e53e3e;
             --white: #ffffff;
+            --slate-dark: #0f172a;
+            --slate-medium: #334155;
+
+            --font-primary: "Poppins", sans-serif;
+            --font-secondary: "Inter", sans-serif;
+
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            --spacing-2xl: 6rem;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: var(--font-secondary);
             line-height: 1.6;
             color: var(--dark-color);
-            background: var(--light-color);
         }
-        
-        .services-section {
-            padding: 80px 0;
-            background: var(--white);
-        }
-        
+
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--spacing-sm);
         }
-        
+
+        /* About Story Section */
+        .about-story-section {
+            position: relative;
+            background: linear-gradient(135deg, var(--light-color) 0%, #ffffff 100%);
+            padding: var(--spacing-2xl) 0;
+            overflow: hidden;
+        }
+
         .section-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: var(--spacing-xl);
         }
-        
-        .section-title {
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: var(--dark-color);
-            margin-bottom: 20px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.3rem;
-            color: var(--gray-color);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        
-        .service-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(249, 115, 22, 0.1);
-            overflow: visible;
-            
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15);
-        }
-        
-        .service-icon {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 0 20px 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.4rem;
-            z-index: 2;
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
-        }
-        
-        .service-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark-color);
-            margin-bottom: 8px;
-            line-height: 1.3;
-           
-        }
-        
-        .service-badge {
+
+        .section-badge {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 20px;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: var(--spacing-sm);
         }
-        
-        .service-description {
+
+        .section-title {
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--slate-dark);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+        }
+
+        .title-highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
             color: var(--gray-color);
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 25px;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        
-        .service-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .service-features li {
-            color: var(--gray-color);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-        
-        .service-features li i {
-            color: var(--primary-color);
-            margin-top: 2px;
-            font-size: 0.8rem;
-        }
-        
-        .learn-more-btn {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            display: inline-flex;
+
+        /* Story Content Grid */
+        .story-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
             align-items: center;
-            gap: 8px;
+            margin-top: var(--spacing-xl);
+        }
+
+        .story-narrative {
+            position: relative;
+        }
+
+        .story-chapter {
+            margin-bottom: var(--spacing-lg);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .story-chapter:nth-child(1) { animation-delay: 0.2s; }
+        .story-chapter:nth-child(2) { animation-delay: 0.4s; }
+        .story-chapter:nth-child(3) { animation-delay: 0.6s; }
+
+        .chapter-title {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--slate-dark);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .chapter-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .chapter-text {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            padding-left: var(--spacing-md);
+        }
+
+        .emotional-quote {
+            background: linear-gradient(135deg, #fff7ed, #ffedd5);
+            border-left: 4px solid var(--primary-color);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--slate-medium);
+        }
+
+        /* Video Section */
+        .video-content {
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            background: var(--slate-dark);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-5deg);
             transition: all 0.3s ease;
         }
-        
-        .learn-more-btn:hover {
-            color: var(--secondary-color);
-            transform: translateX(5px);
+
+        .video-container:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
         }
-        
-        .learn-more-btn i {
-            transition: transform 0.3s ease;
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--slate-dark), var(--slate-medium));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
-        
-        .learn-more-btn:hover i {
-            transform: translateX(5px);
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid rgba(255, 255, 255, 0.2);
         }
-        
-        /* Core Service Styling */
-        .core-service {
-            border: 2px solid var(--primary-color);
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(255, 158, 0, 0.05));
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
         }
-        
-        .core-service .service-badge {
-            background: var(--primary-color);
+
+        .play-button i {
+            color: var(--white);
+            font-size: 2rem;
+            margin-left: 4px;
         }
-        
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+
+        .video-overlay-text {
+            position: absolute;
+            bottom: var(--spacing-md);
+            left: var(--spacing-md);
+            right: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .video-title {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .video-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Specialization Highlight */
+        .specialization-highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 16px;
+            margin: var(--spacing-xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specialization-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .specialization-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .specialization-title {
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .specialization-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+        }
+
+        .cta-content {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-title {
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--slate-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .cta-text {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: none;
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--slate-dark);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: 2px solid var(--slate-dark);
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--slate-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Background Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .section-title {
                 font-size: 2.5rem;
             }
-            
-            .section-subtitle {
-                font-size: 1.1rem;
+
+            .story-content-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
             }
-            
-            .service-card {
-                padding: 30px;
+
+            .video-container {
+                transform: none;
             }
-            
-            .service-title {
-                font-size: 1.6rem;
-                max-width: none;
+
+
+
+            .specialization-title {
+                font-size: 1.5rem;
             }
-            
-            .container {
-                padding: 0 15px;
+
+            .chapter-title {
+                font-size: 1.25rem;
             }
         }
-        
+
         @media (max-width: 480px) {
-            .services-grid {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: 2rem;
             }
             
-            .service-card {
-                padding: 25px;
+            .btn-primary,
+            .btn-secondary {
+                padding: var(--spacing-sm) var(--spacing-md);
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <section class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Core Service Pillars</h2>
-                <p class="section-subtitle">Comprehensive business automation solutions designed to streamline operations, boost efficiency, and accelerate growth</p>
+   <section class="about-story-section" id="about">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <div class="section-badge">Our Story</div>
+            <h2 class="section-title">
+                From <span class="title-highlight">Overload</span> to Opportunity
+            </h2>
+            <p class="section-subtitle">
+                We combine AI and human support to help Realtors save time and close more deals.
+        </div>
+
+        <!-- Story Content -->
+        <div class="story-content-grid">
+            <!-- Story Narrative -->
+            <div class="story-narrative">
+                <div class="story-chapter">
+                    <h3 class="chapter-title">Where It All Began</h3>
+                    <p class="chapter-text">
+                        We saw the gap. AI tools alone weren’t enough, and human effort alone wasn’t sustainable. Realtors were either drowning in endless tasks or buried under complicated software. So we built something different—combining the precision of AI automation with the flexibility of human support. A system designed to save time, generate leads, and let realtors focus on what they do best: closing deals.
+                    </p>
+                    <div class="emotional-quote">
+                        "Technology alone isn’t enough. Human judgment alone isn’t scalable. Together, they’re unstoppable."
+                    </div>
+                    <a href="#full-story" class="read-more-btn">Read Our Full Story →</a>
+                </div>
             </div>
-            
-            <div class="services-grid">
-                <!-- AI & Automation Systems -->
-                <div class="service-card core-service">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="service-badge">Core Service</div>
-                    <h3 class="service-title">AI & Workflow Automation Systems</h3>
-                    <p class="service-description">Build AI systems that run your business on autopilot. From intelligent chatbots to complete workflow automation, we transform how you handle leads, customers, and daily operations.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> AI Chatbots for real estate lead capture & qualification</li>
-                        <li><i class="fas fa-check"></i> Customer Support AI Agents (24/7 inquiries, FAQs, scheduling)</li>
-                        <li><i class="fas fa-check"></i> Personal Assistant AI Agents (reminders, tasks, data management)</li>
-                        <li><i class="fas fa-check"></i> Automated workflow systems (CRM, scheduling, transaction tracking)</li>
-                        <li><i class="fas fa-check"></i> Marketing automation (lead nurturing, email/SMS campaigns)</li>
-                        <li><i class="fas fa-check"></i> Social media automation (posting, scheduling, engagement)</li>
-                        <li><i class="fas fa-check"></i> Custom automation based on your requirement</li>
-                        <li><i class="fas fa-check"></i> Ongoing support maintenance and upgrade</li>
-                    </ul>
-                    <a href="about.html" class="learn-more-btn">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
 
-                <!-- Tech Infrastructure -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <div class="service-badge">The Backbone</div>
-                    <h3 class="service-title">Tech Infrastructure & System Setup</h3>
-                    <p class="service-description">Ensure all AI tools and automations plug seamlessly into existing workflows. We build the foundation that makes everything work together perfectly.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> CRM integration & customization (HubSpot, Zoho, Follow Up Boss)</li>
-                        <li><i class="fas fa-check"></i> Cloud storage & document management setup</li>
-                        <li><i class="fas fa-check"></i> Communication & collaboration tools (Slack, Teams, project management)</li>
-                        <li><i class="fas fa-check"></i> Data security & access control setup</li>
-                        <li><i class="fas fa-check"></i> End-to-end automation architecture</li>
-                        <li><i class="fas fa-check"></i> Custom Business Infrastructure setup</li>
-                        <li><i class="fas fa-check"></i> Ongoing support, maintenance and upgrade</li>
-                    </ul>
-                    <a href="about.html" class="learn-more-btn">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Web Solutions -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="service-badge">The Frontline</div>
-                    <h3 class="service-title">Web Solutions & Digital Presence</h3>
-                    <p class="service-description">Make sure your online presence is modern, professional, and AI-enhanced. We create digital experiences that convert visitors into qualified leads.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Real estate websites (IDX/MLS integration, SEO optimized)</li>
-                        <li><i class="fas fa-check"></i> Landing pages & lead conversion funnels</li>
-                        <li><i class="fas fa-check"></i> AI-powered chat integration on websites</li>
-                        <li><i class="fas fa-check"></i> Mobile optimization</li>
-                        <li><i class="fas fa-check"></i>Business email setup and domain purchase</li>
-                        <li><i class="fas fa-check"></i> Hosting support</li>
-                        <li><i class="fas fa-check"></i> Ongoing website updates & maintenance</li>
-                    </ul>
-                    <a href="web-design.html" class="learn-more-btn">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Human Virtual Assistance -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="service-badge">The Human Layer</div>
-                    <h3 class="service-title">Aministive Virtual Assistant</h3>
-                    <p class="service-description">Cover the 20% of tasks AI can't do well. Our skilled virtual assistants ensure personal touch, creativity, and human judgment remain in place.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Calendar & inbox management</li>
-                        <li><i class="fas fa-check"></i> Transaction coordination</li>
-                        <li><i class="fas fa-check"></i> Database organization & data entry</li>
-                        <li><i class="fas fa-check"></i> Branding support (light edits, social consistency)</li>
-                        <li><i class="fas fa-check"></i> Graphic design (templates & quick assets)</li>
-                        <li><i class="fas fa-check"></i> Social media posting & authentic engagement</li>
-                        <li><i class="fas fa-check"></i> Light content editing & creation</li>
-                    </ul>
-                    <a href="Executive-Support.html" class="learn-more-btn">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+         <!-- Video Content -->
+        <div class="video-content">
+        <div class="video-container">
+            <div class="video-placeholder" id="videoPlaceholder">
+            <div class="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="video-overlay-text">
+                <h4 class="video-title">Our Mission in Action</h4>
+                <p class="video-description">See how we help realtors win with AI + people</p>
+            </div>
             </div>
         </div>
-    </section>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
 </body>
 </html>

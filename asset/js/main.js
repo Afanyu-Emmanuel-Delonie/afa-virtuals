@@ -1,3 +1,48 @@
+// ===================== Custom Test Page Features =====================
+// Video placeholder click-to-embed
+document.addEventListener('DOMContentLoaded', function() {
+    const videoPlaceholder = document.getElementById("videoPlaceholder");
+    if (videoPlaceholder) {
+        videoPlaceholder.addEventListener("click", function () {
+            videoPlaceholder.innerHTML = `
+              <iframe width="100%" height="100%" 
+                src="" 
+                title="Our Mission in Action" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            `;
+            videoPlaceholder.classList.add("video-active");
+        });
+    }
+
+    // Smooth scroll for CTA buttons (anchors)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Intersection observer for .story-chapter animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    });
+    document.querySelectorAll('.story-chapter').forEach(chapter => {
+        observer.observe(chapter);
+    });
+});
 // CTA Section Particle Animation and Call Scheduling
 function createParticles() {
     const particleField = document.getElementById('particleField');
