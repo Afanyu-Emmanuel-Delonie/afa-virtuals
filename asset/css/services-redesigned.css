@@ -860,14 +860,14 @@ h6 {
             font-weight: 500;
         }
 
-        .hero-visual {
+       .main-hero {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .visual-container {
+        .image-wrapper {
             position: relative;
             width: 500px;
             height: 400px;
@@ -881,7 +881,7 @@ h6 {
                 inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
-        .visual-container::before {
+        .image-wrapper::before {
             content: '';
             position: absolute;
             top: 0;
@@ -892,7 +892,7 @@ h6 {
             filter: grayscale(30%) blur(0.5px);
         }
 
-        .visual-overlay {
+        .image-content {
             position: absolute;
             inset: 0;
             background: 
@@ -902,82 +902,52 @@ h6 {
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px;
         }
 
-        .visual-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
-            animation: pulse 2s infinite;
+        .image-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        .visual-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .visual-subtext {
-            font-size: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .floating-elements {
+        .animated-icons {
             position: absolute;
-            inset: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             pointer-events: none;
         }
 
-        .floating-element {
+        .icon-element {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-glow);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            animation: float 6s ease-in-out infinite;
-            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.1);
+            font-size: 24px;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.8;
         }
 
-        .floating-element:nth-child(1) {
+        .icon-element:nth-child(1) {
             top: 20%;
-            left: 10%;
-            animation-delay: -1s;
+            left: 15%;
+            animation-delay: 0s;
         }
 
-        .floating-element:nth-child(2) {
+        .icon-element:nth-child(2) {
             top: 60%;
-            right: 15%;
-            animation-delay: -3s;
+            right: 20%;
+            animation-delay: 1s;
         }
 
-        .floating-element:nth-child(3) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: -5s;
+        .icon-element:nth-child(3) {
+            bottom: 25%;
+            left: 25%;
+            animation-delay: 2s;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
         }
 
         .pain-grid {
